@@ -1,0 +1,40 @@
+﻿<Window x:Class="EuroGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EuroGUI"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="dgOutput" Grid.ColumnSpan="4"/>
+
+
+        <Button Grid.Row="1" Grid.ColumnSpan="2" Width="200" Height="50" Click="btn1_click">4. Feladat</Button>
+        <Button Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Width="200" Height="50" Click="btn2_click">5. Feladat</Button>
+
+        <Button Grid.Row="2"  Grid.Column="1" Grid.ColumnSpan="2" Width="200" Height="50" Click="btn3_click">6. Feladat</Button>
+        <Separator Grid.Row="2" Grid.ColumnSpan="4" VerticalAlignment="Bottom"></Separator>
+
+        <Button Click="btn4_click" Grid.Row="3" Grid.Column="4" Width="200" Height="50" >7. Feladat</Button>
+        <Button Click="btn5_click" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Width="200" Height="50" >8. Feladat</Button>
+        
+        <ListBox x:Name="lbSearchAnswer" Grid.RowSpan="2" Grid.Column="4" Width="300" ></ListBox>
+        <TextBox x:Name="tbSearchBar" Grid.Row="2" Grid.Column="4" Width="200" Height="50" VerticalContentAlignment="Center" ></TextBox>
+        <Label x:Name="lblDatum" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2"  Height="50" VerticalContentAlignment="Center">Verseny dátuma:</Label>
+    </Grid>
+</Window>
